@@ -1,0 +1,30 @@
+.container .new-tweet{
+  border: 2px solid lightgrey;
+  margin: 10px 2em;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #eee;
+
+}
+
+.new-tweet h2{
+  margin: 0;
+}
+
+.new-tweet hr{
+  margin-top: 0;
+}
+
+form textarea{
+  width: 100%;
+  padding: 5px;
+}
+
+form [type="submit"] {
+
+}
+
+form .counter{
+  float: right;
+  line-height: 2;
+}
