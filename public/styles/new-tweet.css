@@ -20,9 +20,6 @@ form textarea{
   padding: 5px;
 }
 
-form [type="submit"] {
-
-}
 
 form .counter{
   float: right;
