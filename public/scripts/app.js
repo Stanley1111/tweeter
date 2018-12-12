@@ -21,6 +21,14 @@ $(document).ready(function() {
     }
   }
 
+  //Help: escape text
+  function escape(str) {
+    var div = document.createElement('div');
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  }
+
+
   //Accepts tweet object and returns a JQuery object of the tweet HTML model
   function createTweetElement (data){
     let tweetObj = `
@@ -28,10 +36,10 @@ $(document).ready(function() {
         <article class="old-tweets">
           <header>
             <img src= ${data.user.avatars.small} />
-            <span class="name">${data.user.name}</span>
-            <span class="tag">${data.user.handle}</span>
+            <span class="name">${escape(data.user.name)}</span>
+            <span class="tag">${escape(data.user.handle)}</span>
           </header>
-          <div class="twbody">${data.content.text}</div>
+          <div class="twbody">${escape(data.content.text)}</div>
           <footer>
             <span>${moment(data.created_at).fromNow()}</span>
             <i class="fas fa-flag"></i>
