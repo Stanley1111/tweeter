@@ -1,0 +1,68 @@
+.container .old-tweets{
+  margin: 10px 2em;
+  border: 2px solid lightgrey;
+  border-radius: 5px;
+
+}
+
+.container .old-tweets:hover{
+  margin: 10px 2em;
+  border: 2px solid grey;
+  border-radius: 5px;
+  opacity: 1;
+
+}
+
+.old-tweets header{
+  opacity: 0.5;
+  background-color: #F3F3F3;
+  box-sizing: content-box;
+  padding: 10px;
+  overflow: auto
+}
+
+.old-tweets:hover header{
+  opacity: 1;
+}
+
+.old-tweets footer{
+  padding: 7px 10px;
+  font-size: 0.8em;
+}
+
+.old-tweets .fas{
+  float: right;
+  padding-left: 6px;
+  visibility: hidden
+}
+
+.old-tweets:hover .fas{
+  visibility: visible;
+}
+
+.old-tweets .twbody{
+  border-bottom: 2px solid #F3F3F3;
+  width: 100%;
+  padding: 20px 10px;
+}
+
+.old-tweets:hover .twbody{
+  opacity: 1;
+}
+
+.old-tweets img{
+  float: left;
+  border-radius: 5px;
+}
+
+.old-tweets .name{
+  float: left;
+  margin: 0;
+  padding-left: 10px;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.old-tweets .tag{
+  float: right;
+}
