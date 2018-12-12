@@ -25,3 +25,11 @@ form .counter{
   float: right;
   line-height: 2;
 }
+
+.error{
+  background-color: red;
+  padding-left: 10px;
+  margin-bottom: 5px;
+  font-weight: bold;
+  display: none;
+}

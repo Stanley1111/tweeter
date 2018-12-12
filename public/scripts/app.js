@@ -11,12 +11,22 @@ $(document).ready(function() {
     const limit = 140;
     const tlength = tweet.length;
     if(tlength > 140){
-      alert("Tweet too long!");
+      $(".error").empty();
+      $(".error").append("Tweet too long");
+      $(".error").slideDown("normal", function(){
+      });
       return false;
     } else if (tlength < 1){
-      alert("No tweet found!");
+      $(".error").empty();
+      $(".error").append("Enter a tweet");
+      $(".error").slideDown("normal", function(){
+      });
       return false;
     } else {
+
+      $(".error").slideUp("normal", function(){
+        $(".error").empty();
+      });
       return true;
     }
   }
@@ -90,5 +100,12 @@ $(document).ready(function() {
 
   loadTweets();
 
+  $compose = $("#compose");
+  $compose.on('click', function(){
+    $(".container .new-tweet").slideToggle("normal", function(){
+
+    });
+    $(".new-tweet textarea").focus();
+  });
 
 });

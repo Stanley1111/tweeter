@@ -23,3 +23,21 @@
   margin-left: 10px;
   height: 100%;
 }
+
+#compose {
+  float: right;
+  box-sizing: content-box;
+  margin: 8px 20px;
+  height: 55px;
+  width: 100px;
+  border-radius: 7px;
+  border: 1px solid black;
+  color: #00a087;
+}
+
+#compose:hover {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}
+

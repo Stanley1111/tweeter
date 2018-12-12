@@ -33,6 +33,7 @@
     <nav id="nav-bar">
       <img class="logo" src="/images/bird.png">
       <span class="header">Tweeter</span>
+      <button id="compose"><i class="far fa-edit"></i>Compose</button>
     </nav>
 
     <!-- Page-specific (main) content here -->
@@ -42,6 +43,7 @@
         <hr>
         <form method="POST" action="/tweets">
           <textarea name="text" placeholder="What are you humming about?"></textarea>
+          <div class="error"></div>
           <input type="submit" value="Tweet">
           <span class="counter">140</span>
         </form>
