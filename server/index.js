@@ -54,7 +54,6 @@ MongoClient.connect(MONGODB_URI, (err, db) => {
       process.exit();
     }
   }
-
   process.on('SIGTERM', gracefulShutdown); // listen for TERM signal .e.g. kill
   process.on('SIGINT', gracefulShutdown); // listen for INT signal e.g. Ctrl-C
 
