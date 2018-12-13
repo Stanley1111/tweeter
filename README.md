@@ -19,3 +19,11 @@ This repository is the starter code for the project: Students will fork and clon
 - Chance
 - MD5
 - MongoDB
+
+## Screenshots
+
+!["Tweeter Homepage"](https://github.com/Stanley1111/tweeter/blob/master/docs/TweeterHome.png)
+!["Compose a Tweet"](https://github.com/Stanley1111/tweeter/blob/master/docs/TweeterCompose.png)
+!["Error: Trying to submit with no tweet"](https://github.com/Stanley1111/tweeter/blob/master/docs/ErrorNoTweet.png)
+!["Error: Tweet too long"](https://github.com/Stanley1111/tweeter/blob/master/docs/ErrorTooLong.png)
+
