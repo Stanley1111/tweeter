@@ -75,14 +75,16 @@ $(document).ready(function() {
   var $submit = $('.new-tweet input');
   $submit.on('click', function () {
     event.preventDefault();
-    var tweet =$(this).siblings("textarea")[0].value;
+    var tweet = $(this).siblings("textarea")[0].value;
+    // console.log($(this).siblings("textarea")[0].value);
+    // console.log($(this).siblings("textarea")[0].val());
 
 
     if (validateTweet(tweet)){
       $.ajax('/tweets', { method: 'POST', data: $(this).siblings("textarea").serialize() })
       .then(function(item){
-        console.log("Ajax Post");
         loadTweets();
+        $(".new-tweet textarea").val('');
       })
     }
 
