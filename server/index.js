@@ -40,4 +40,22 @@ MongoClient.connect(MONGODB_URI, (err, db) => {
     console.log("Example app listening on port " + PORT);
   });
 
+  // The code below here is to make sure that we close the conncetion to mongo when this node process terminates
+  function gracefulShutdown() {
+    console.log("\nShutting down gracefully...");
+    try {
+      db.close();
+    }
+    catch (err) {
+      throw err;
+    }
+    finally {
+      console.log("I'll be back.");
+      process.exit();
+    }
+  }
+
+  process.on('SIGTERM', gracefulShutdown); // listen for TERM signal .e.g. kill
+  process.on('SIGINT', gracefulShutdown); // listen for INT signal e.g. Ctrl-C
+
 });
