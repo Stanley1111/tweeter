@@ -44,6 +44,7 @@
   border-bottom: 2px solid #F3F3F3;
   width: 100%;
   padding: 20px 10px;
+  word-wrap: break-word;
 }
 
 .old-tweets:hover .twbody{
