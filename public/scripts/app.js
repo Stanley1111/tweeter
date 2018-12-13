@@ -107,6 +107,7 @@ $(document).ready(function() {
 
   loadTweets();
 
+  //toggles the new tweet section from hidden and showing
   $compose = $("#compose");
   $compose.on('click', function(){
     $(".container .new-tweet").slideToggle("normal", function(){
