@@ -85,6 +85,11 @@ $(document).ready(function() {
       .then(function(item){
         loadTweets();
         $(".new-tweet textarea").val('');
+
+        //refresh char counter
+        let currLength = $(".new-tweet textarea").val().length;
+        let remainingChar = 140 - currLength;
+        $(".counter").text(remainingChar);
       })
     }
 
