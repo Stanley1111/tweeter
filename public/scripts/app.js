@@ -71,6 +71,18 @@ $(document).ready(function() {
     }
   }
 
+  //Login
+  var $login = $('#login-btn');
+  $login.on("click", function() {
+    event.preventDefault();
+    //console.log("ajax login");
+    $.ajax("/tweets/login", { method: "POST", data: $("#login").serialize() })
+    .then(function(item){
+
+    });
+    //console.log($("#login").serialize());
+  });
+
   //Setup for listening for tweet submission and entry to DB.
   var $submit = $('.new-tweet input');
   $submit.on('click', function () {

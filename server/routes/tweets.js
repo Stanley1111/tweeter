@@ -17,6 +17,13 @@ module.exports = function(DataHelpers) {
     });
   });
 
+  //GET login page
+  tweetsRoutes.post("/login", function(req, res){
+    // DataHelpers.checkUser();
+    console.log("ajax sent:",req.body.uname, req.body.psw);
+    //res.send();
+  });
+
   tweetsRoutes.post("/", function(req, res) {
     if (!req.body.text) {
       res.status(400).json({ error: 'invalid request: no data in POST body'});

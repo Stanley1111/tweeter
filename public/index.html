@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
     <link rel="stylesheet" href="/styles/old-tweets.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/login.css" type="text/css" />
 
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
@@ -35,6 +36,18 @@
       <span class="header">Tweeter</span>
       <button id="compose"><i class="far fa-edit"></i>Compose</button>
     </nav>
+
+    <!-- Login Form -->
+    <form id="login" action="/tweets/login" method="POST">
+      <label id="log-title">Login:</label>
+      <label for="uname"><b>Username</b></label>
+      <input id="username" type="text" placeholder="Enter Username" name="uname">
+
+      <label for="psw"><b>Password</b></label>
+      <input id="password" type="password" placeholder="Enter Password" name="psw">
+
+      <button id="login-btn" type="submit">Login</button>
+    </form>
 
     <!-- Page-specific (main) content here -->
     <main class="container">

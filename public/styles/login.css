@@ -1,0 +1,15 @@
+#login{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 80px;
+  border: 2px solid black;
+  z-index: 6;
+  background-color: white;
+}
+
+#log-title{
+  font-weight: bold;
+  font-size: 1.5em;
+  margin-bottom: 1%;
+}
