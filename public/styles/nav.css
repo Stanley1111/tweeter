@@ -7,17 +7,16 @@
   color: #e8fdff;
   padding: 0 2em;
   z-index: 5;
+  display: flex;
 }
 
 #nav-bar .logo{
-  width: 80px;
-  height: 80px;
-  float: left;
-
+  width: auto;
+  height: 80%;
+  margin: auto 0;
 }
 
 #nav-bar .header{
-  float: left;
   font-size: 2em;
   line-height: 2.2;
   margin-left: 10px;
@@ -25,10 +24,9 @@
 }
 
 #compose {
-  float: right;
-  box-sizing: content-box;
-  margin: 8px 20px;
-  height: 55px;
+  /*box-sizing: content-box;*/
+  margin: auto 5% auto auto;
+  height: 80%;
   width: 100px;
   border-radius: 7px;
   border: 1px solid black;
