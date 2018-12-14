@@ -19,8 +19,18 @@ module.exports = function(DataHelpers) {
 
   //GET login page
   tweetsRoutes.post("/login", function(req, res){
-    // DataHelpers.checkUser();
     console.log("ajax sent:",req.body.uname, req.body.psw);
+    const user = {
+      username: req.body.uname,
+      password: req.body.psw
+    };
+    DataHelpers.checkUser(user, (err) => {
+      if (err) {
+        res.status(500).json({ error: err.message });
+      } else {
+        res.status(201).send();
+      }
+    });
     //res.send();
   });
 
