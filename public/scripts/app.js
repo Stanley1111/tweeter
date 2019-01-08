@@ -8,6 +8,7 @@ $(document).ready(function() {
   //helper function: validate tweet submission
   function validateTweet (tweet){
 
+    //error message handling
     const limit = 140;
     const tlength = tweet.length;
     if(tlength > 140){
@@ -78,7 +79,7 @@ $(document).ready(function() {
     //console.log("ajax login");
     $.ajax("/tweets/login", { method: "POST", data: $("#login").serialize() })
     .then(function(item){
-
+      //console.log("item?" item);
     });
     //console.log($("#login").serialize());
   });

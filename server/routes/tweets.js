@@ -24,16 +24,20 @@ module.exports = function(DataHelpers) {
       username: req.body.uname,
       password: req.body.psw
     };
+
     DataHelpers.checkUser(user, (err) => {
       if (err) {
+        console.log("checkuser error");
         res.status(500).json({ error: err.message });
       } else {
-        res.status(201).send();
+        console.log("checkUser pass");
+        //res.status(201).send();
       }
     });
     //res.send();
   });
 
+  //Save a tweet
   tweetsRoutes.post("/", function(req, res) {
     if (!req.body.text) {
       res.status(400).json({ error: 'invalid request: no data in POST body'});

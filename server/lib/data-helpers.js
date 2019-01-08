@@ -24,8 +24,16 @@ module.exports = function makeDataHelpers(db) {
         const sortNewestFirst = (a, b) => a.created_at - b.created_at;
         callback(null, tweets.sort(sortNewestFirst));
       });
+    },
 
+    checkUser: function(user, callback){
+      console.log("username in checkUser:", user.username);
+      var x = db.collection("users").find({"username" : user.username}).toArray((err, user) => {
+        console.log(user);
+      });
 
+      //console.log("test: ",x);
+      //callback(null, true);
     }
 
   };
