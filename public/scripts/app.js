@@ -73,7 +73,7 @@ $(document).ready(function() {
 
   //Setup for listening for tweet submission and entry to DB.
   var $submit = $('.new-tweet input');
-  $submit.on('click', function () {
+  $submit.on('click', function (event) {
     event.preventDefault();
     var tweet = $(this).siblings("textarea")[0].value;
 
