@@ -1,9 +1,10 @@
 "use strict";
 
 const userHelper    = require("../lib/util/user-helper")
-
+const Filter        = require('bad-words'); 
 const express       = require('express');
 const tweetsRoutes  = express.Router();
+let filter = new Filter();
 
 module.exports = function(DataHelpers) {
 
@@ -27,7 +28,7 @@ module.exports = function(DataHelpers) {
     const tweet = {
       user: user,
       content: {
-        text: req.body.text
+        text: filter.clean(req.body.text)
       },
       created_at: Date.now()
     };
