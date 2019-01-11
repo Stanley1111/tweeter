@@ -20,7 +20,7 @@ MongoClient.connect(MONGODB_URI, (err, db) => {
     console.error(`Failed to connect to MongoServer`);
     throw err;
   }
-  setInterval(function(){ alert("Hello"); }, 5000);
+  
   // The in-memory database of tweets. It's a basic object with an array in it.
   //const db = require("./lib/in-memory-db");
 
@@ -44,6 +44,7 @@ MongoClient.connect(MONGODB_URI, (err, db) => {
     console.log("Example app listening on port " + PORT);
   });
 
+  setInterval(function(){ console.log("Dropping table"); db.collection("tweets").drop(); }, 86400000);
   // The code below here is to make sure that we close the conncetion to mongo when this node process terminates
   function gracefulShutdown() {
     console.log("\nShutting down gracefully...");
