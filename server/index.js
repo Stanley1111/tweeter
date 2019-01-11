@@ -20,6 +20,10 @@ MongoClient.connect(MONGODB_URI, (err, db) => {
     console.error(`Failed to connect to MongoServer`);
     throw err;
   }
+  db.collection('tweets').createIndex(
+  {'created': 1 },
+  { unique: true, background: true, w: 1, expireAfterSeconds: 60}
+  );
   // The in-memory database of tweets. It's a basic object with an array in it.
   //const db = require("./lib/in-memory-db");
 
