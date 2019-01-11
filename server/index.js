@@ -20,7 +20,7 @@ MongoClient.connect(MONGODB_URI, (err, db) => {
     console.error(`Failed to connect to MongoServer`);
     throw err;
   }
-  
+  setInterval(function(){ alert("Hello"); }, 5000);
   // The in-memory database of tweets. It's a basic object with an array in it.
   //const db = require("./lib/in-memory-db");
 
