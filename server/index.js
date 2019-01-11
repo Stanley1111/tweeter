@@ -11,7 +11,7 @@ const MongoClient   = require("mongodb").MongoClient;
 const MONGODB_URI   = `mongodb://${process.env.DB_USER}:${process.env.DB_PASS}@ds253324.mlab.com:53324/tweeter`;
 //"mongodb://localhost:27017/tweeter"
 //`mongodb://${process.env.DB_USER}:${process.env.DB_PASS}@ds253324.mlab.com:53324/tweeter`
-
+console.log("mongo",MONGODB_URI);
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
