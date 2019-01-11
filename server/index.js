@@ -8,7 +8,7 @@ const express       = require("express");
 const bodyParser    = require("body-parser");
 const app           = express();
 const MongoClient   = require("mongodb").MongoClient;
-const MONGODB_URI   = `mongodb://${process.env.DB_USER}:${process.env.DB_PASS}@${process.env.DB_PORT}/${process.env.DB_NAME}`;
+const MONGODB_URI   = "mongodb://localhost:27017/tweeter";
 //"mongodb://localhost:27017/tweeter"
 //`mongodb://${process.env.DB_USER}:${process.env.DB_PASS}@${process.env.DB_PORT}/${process.env.DB_NAME}`
 
